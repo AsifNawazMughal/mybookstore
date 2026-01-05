@@ -1,0 +1,53 @@
+#body {
+  background-image: url("../../../assets/hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 100vh;
+  font-family: "Bona Nova", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+.heading {
+  background: radial-gradient(circle at center, #ffd700 0%, #ff8c00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+#search-box {
+  border: 2px solid #cc9600 !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.my-custom-input,
+.my-custom-input:focus {
+  background: transparent !important;
+  border: none !important;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+#search-box .btn {
+  background: #5a3a0a !important;
+  color: #fff !important;
+  border: none !important;
+  font-weight: 600;
+  border-radius: 8px !important;
+  padding: 0.5rem 2rem;
+  transition: background 0.2s;
+}
+#search-box .btn:hover {
+  background: #7a4d0f !important;
+  color: #fff !important;
+}
+
+#search-box .form-control::placeholder {
+  color: #ccc !important;
+  opacity: 1;
+}
