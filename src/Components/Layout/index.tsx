@@ -12,6 +12,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
     <Header />
     <div>{children}</div>
+    
     <Footer />
     </>
   )
