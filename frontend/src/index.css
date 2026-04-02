@@ -1,0 +1,301 @@
+
+:root {
+  font-family: "Bona Nova", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif !important;
+  --theme-gold: #cc9600;
+  --theme-gold-hover: #e6ac00;
+  --theme-black: #000000;
+  --theme-white: #ffffff;
+  --theme-dark-bg: #121212;
+}
+
+
+/* Global Styles */
+* {
+  font-family: "Bona Nova", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif !important;
+  color: var(--theme-white);
+  }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  color: var(--theme-white);
+  background-color: var(--theme-black);
+  overflow-x: hidden;
+}
+
+
+header{
+  background-color: var(--theme-black);
+
+}
+
+#body {
+  background-image: url("./assets/hero.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  font-family: "Bona Nova", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+
+
+.heading {
+ 
+  background: radial-gradient(
+    circle at center,
+    var(--theme-gold) 0%,
+    var(--theme-gold-hover) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+#search-box {
+  border: 2px solid var(--theme-gold) !important;
+  border-radius: 12px !important;
+  background: transparent !important;
+  padding: 4px 4px;
+  display: flex;
+  align-items: center;
+}
+
+.my-custom-input,
+.my-custom-input:focus {
+  background: transparent !important;
+  border: none !important;
+  color: var(--theme-white) !important;
+  box-shadow: none !important;
+}
+
+#search-box .btn {
+  background: var(--theme-gold) !important;
+  color: var(--theme-black) !important;
+  border: none !important;
+  font-weight: 600;
+  border-radius: 8px !important;
+  padding: 0.5rem 2rem;
+  transition: background 0.2s;
+}
+#search-box .btn:hover {
+  background: var(--theme-gold-hover) !important;
+  color: var(--theme-black) !important;
+}
+
+#search-box .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+  opacity: 1;
+}
+#search-box .form-control:focus {
+  box-shadow: none !important;
+}
+
+#nav-bar {
+  background-color: var(--theme-black);
+  
+}
+
+.nav-link:hover{
+  
+    color: var(--theme-gold);
+    font-weight: bold;
+    border-bottom: #cc9600 2px solid;
+    transition: 0.2s ease-in-out;
+  
+}
+
+
+#nav-bar a,
+#nav-bar button {
+  color: var(--theme-white);
+  font-size: 18px;
+}
+
+/* .navbar-brand h2,
+#nav-bar a:hover {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--theme-gold);
+} */
+
+
+footer {
+  background-color: var(--theme-black);
+  font-family: "Bona Nova", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+}
+
+/* Theme Utilities for Reusability */
+.btn-theme {
+  background-color: var(--theme-gold) !important;
+  color: var(--theme-black) !important;
+  border: none !important;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-theme:hover {
+  background-color: var(--theme-gold-hover) !important;
+  transform: translateY(-2px);
+}
+
+.form-theme input,
+.form-theme textarea {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ) !important; /* Semi-transparent white */
+  border: 1px solid var(--theme-gold) !important;
+  color: var(--theme-white) !important;
+}
+
+.form-theme input:focus,
+.form-theme textarea:focus {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border-color: var(--theme-gold-hover) !important;
+  box-shadow: 0 0 0 0.25rem rgba(204, 150, 0, 0.25) !important;
+  color: var(--theme-white) !important;
+}
+
+.form-theme label {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Floating label override for dark bg */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--theme-gold) !important;
+  background-color: transparent !important; /* Fix for label background */
+}
+.form-floating > .form-control:-webkit-autofill {
+  -webkit-text-fill-color: var(--theme-white) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.login-page-bg {
+  background-color: var(--theme-black);
+  background-image: radial-gradient(circle at 10% 20%, rgba(204, 150, 0, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(204, 150, 0, 0.12) 0%, transparent 35%);
+}
+
+.login-shell {
+  border: 1px solid var(--theme-gold);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.login-brand-panel {
+  background: linear-gradient(
+    180deg,
+    rgba(204, 150, 0, 0.15) 0%,
+    rgba(204, 150, 0, 0.03) 100%
+  );
+  border-right: 1px solid rgba(204, 150, 0, 0.35);
+}
+
+.login-brand-title {
+  color: var(--theme-gold);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.login-brand-copy {
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.7;
+}
+
+.login-form-panel {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.login-title {
+  color: var(--theme-gold);
+  font-weight: 700;
+}
+
+.login-subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login-field-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin-bottom: 0.5rem;
+}
+
+.login-input-icon {
+  border: 1px solid var(--theme-gold) !important;
+  border-right: none !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: var(--theme-gold) !important;
+}
+
+.form-theme .login-input-icon + .form-control {
+  border-left: none !important;
+}
+
+.login-toggle-btn {
+  border: 1px solid var(--theme-gold) !important;
+  color: var(--theme-gold) !important;
+  background-color: transparent !important;
+}
+
+.login-toggle-btn:hover,
+.login-toggle-btn:focus,
+.login-toggle-btn:active {
+  background-color: rgba(204, 150, 0, 0.12) !important;
+  color: var(--theme-gold) !important;
+}
+
+.login-remember .form-check-input {
+  border-color: var(--theme-gold) !important;
+  background-color: transparent !important;
+}
+
+.login-remember .form-check-input:checked {
+  background-color: var(--theme-gold) !important;
+}
+
+.login-remember .form-check-label {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.login-link-btn {
+  background: transparent;
+  border: none;
+  color: var(--theme-gold);
+  padding: 0;
+}
+
+.login-link-btn:hover {
+  color: var(--theme-gold-hover);
+}
+
+.login-error-text {
+  color: var(--theme-gold-hover);
+  font-size: 0.85rem;
+  margin-top: 0.35rem;
+}
+
+.login-highlight {
+  color: var(--theme-gold);
+  font-weight: 600;
+}
+
+@media (max-width: 767.98px) {
+  .login-shell {
+    border-radius: 14px !important;
+  }
+
+  .login-title {
+    font-size: 2rem;
+  }
+}
+
